@@ -1,14 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package view;
 
-/**
- *
- * @author gamer5
- */
 public class FormEmpleados extends javax.swing.JFrame {
 
     /**
@@ -43,8 +35,20 @@ public class FormEmpleados extends javax.swing.JFrame {
         btnCrearVendedor = new javax.swing.JButton();
         btnEliminarVendedor = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        btnCrearAdministrador = new javax.swing.JButton();
+        btnBuscarAdministrador = new javax.swing.JButton();
+        btnModificarAdministrador = new javax.swing.JButton();
+        btnEliminarAdministrador = new javax.swing.JButton();
+        txtDNIAdministrador = new javax.swing.JTextField();
+        txtNombreAdministrador = new javax.swing.JTextField();
+        txtApellidoAdministrador = new javax.swing.JTextField();
+        txtSueldoBaseAdministrador = new javax.swing.JTextField();
+        txtExperienciaAdministrador = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Gestión de Personal");
 
         txtNombreVendedor.setBorder(javax.swing.BorderFactory.createTitledBorder("Nombre"));
 
@@ -56,6 +60,7 @@ public class FormEmpleados extends javax.swing.JFrame {
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
+        jTextArea1.setBorder(javax.swing.BorderFactory.createTitledBorder("Lista de Vendedores"));
         jScrollPane1.setViewportView(jTextArea1);
 
         btnBuscarVendedor.setText("Buscar");
@@ -99,8 +104,8 @@ public class FormEmpleados extends javax.swing.JFrame {
                             .addComponent(txtMontoVendidoVendedor, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtSedeVendedor, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnModificarVendedor, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -136,15 +141,93 @@ public class FormEmpleados extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Vendedor", jPanel1);
 
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jTextArea2.setBorder(javax.swing.BorderFactory.createTitledBorder("Lista de Administradores"));
+        jScrollPane2.setViewportView(jTextArea2);
+
+        btnCrearAdministrador.setText("Crear");
+        btnCrearAdministrador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCrearAdministradorActionPerformed(evt);
+            }
+        });
+
+        btnBuscarAdministrador.setText("Buscar");
+        btnBuscarAdministrador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarAdministradorActionPerformed(evt);
+            }
+        });
+
+        btnModificarAdministrador.setText("Modificar");
+
+        btnEliminarAdministrador.setText("Eliminar");
+        btnEliminarAdministrador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarAdministradorActionPerformed(evt);
+            }
+        });
+
+        txtDNIAdministrador.setBorder(javax.swing.BorderFactory.createTitledBorder("DNI"));
+
+        txtNombreAdministrador.setBorder(javax.swing.BorderFactory.createTitledBorder("Nombre"));
+
+        txtApellidoAdministrador.setBorder(javax.swing.BorderFactory.createTitledBorder("Apellido"));
+
+        txtSueldoBaseAdministrador.setBorder(javax.swing.BorderFactory.createTitledBorder("Sueldo Base"));
+
+        txtExperienciaAdministrador.setBorder(javax.swing.BorderFactory.createTitledBorder("Años de experiencia"));
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 763, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtNombreAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtApellidoAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSueldoBaseAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnCrearAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnBuscarAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtDNIAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(29, 29, 29)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtExperienciaAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnModificarAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnEliminarAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 356, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 394, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtDNIAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtExperienciaAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtNombreAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtApellidoAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtSueldoBaseAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnModificarAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCrearAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnEliminarAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBuscarAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(9, 9, 9))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jScrollPane2)
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Administrador", jPanel2);
@@ -167,6 +250,18 @@ public class FormEmpleados extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnEliminarVendedorActionPerformed
 
+    private void btnBuscarAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarAdministradorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBuscarAdministradorActionPerformed
+
+    private void btnEliminarAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarAdministradorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEliminarAdministradorActionPerformed
+
+    private void btnCrearAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearAdministradorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCrearAdministradorActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -178,7 +273,7 @@ public class FormEmpleados extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Metal".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -203,20 +298,31 @@ public class FormEmpleados extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBuscarAdministrador;
     private javax.swing.JButton btnBuscarVendedor;
+    private javax.swing.JButton btnCrearAdministrador;
     private javax.swing.JButton btnCrearVendedor;
+    private javax.swing.JButton btnEliminarAdministrador;
     private javax.swing.JButton btnEliminarVendedor;
+    private javax.swing.JButton btnModificarAdministrador;
     private javax.swing.JButton btnModificarVendedor;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextField txtApellidoAdministrador;
     private javax.swing.JTextField txtApellidoVendedor;
+    private javax.swing.JTextField txtDNIAdministrador;
     private javax.swing.JTextField txtDNIVendedor;
+    private javax.swing.JTextField txtExperienciaAdministrador;
     private javax.swing.JTextField txtMontoVendidoVendedor;
+    private javax.swing.JTextField txtNombreAdministrador;
     private javax.swing.JTextField txtNombreVendedor;
     private javax.swing.JTextField txtSedeVendedor;
+    private javax.swing.JTextField txtSueldoBaseAdministrador;
     private javax.swing.JTextField txtSueldoBaseVendedor;
     private javax.swing.JTextField txtTasaComisionVendedor;
     // End of variables declaration//GEN-END:variables
